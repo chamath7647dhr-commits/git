@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Product Table</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <div id="product-table-container">
+    <table border="1" id="product-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+            
+        </tbody>
+
+    </table>
+
+
+
+
+
+
+
+    <script>
+       const products = [
+        {
+            name: "Jaffna Curry Powder",
+            price: "Rs.280.00" ,
+            description: "A blend of spices for authentic Jaffna-style curries."
+        },
+        {
+            name: "Jaffna Roasted Curry Powder",
+            price: "Rs.300.00",
+            description: "Roasted version of the popular Jaffna curry powder."
+        },
+        {
+            name: "Masuran Cinnamon Powder",
+            price: "Rs.150.00",
+            description: "Aromatic cinnamon powder from the Masuran Products."
+        },
+        {
+            name: "Masuran Turmeric Powder",
+            price: "Rs.180.00",
+            description: "Bright yellow turmeric powder for cooking and health benefits."
+        },
+        {
+            name: "Masuran Black Pepper Powder",
+            price: "Rs.220.00",
+            description: "Freshly ground black pepper powder for seasoning."
+        },
+        {
+            name: "Masuran Cardamom Powder",
+            price: "Rs.250.00",
+            description: "Fragrant cardamom powder for desserts and beverages."
+        },
+        {
+            name: "Masuran Clove Powder",
+            price: "Rs.200.00",
+            description: "Ground clove powder for culinary and medicinal uses."
+        },
+        {
+            name: "Masuran Nutmeg Powder",
+            price: "Rs.230.00",
+            description: "Nutmeg powder for baking and flavoring dishes."
+        },
+        {
+            name: "Masuran Fennel Seed Powder",
+            price: "Rs.190.00",
+            description: "Fennel seed powder for digestive health and cooking."
+        },
+        {
+            name: "Masuran Mustard Seed Powder",
+            price: "Rs.210.00",
+            description: "Ground mustard seed powder for pickling and seasoning."
+        }
+       ]
+
+       const container = document.getElementById('product-container');
+       const tableBody = document.getElementById('product-table-body');
+
+       tableBody.innerHTML = products.map(product => {
+           return `
+               <tr>
+                   <td>${product.name}</td>
+                   <td>${product.price}</td>
+                   <td>${product.description}</td>
+               </tr>
+           `;
+       }).join('');
+    </script>
+</body>
+</html>
